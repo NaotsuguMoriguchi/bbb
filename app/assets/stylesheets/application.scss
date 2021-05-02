@@ -1,0 +1,408 @@
+/* BigBlueButton open source conferencing system - http://www.bigbluebutton.org/.
+*
+* Copyright (c) 2018 BigBlueButton Inc. and by respective authors (see below).
+*
+* This program is free software; you can redistribute it and/or modify it under the
+* terms of the GNU Lesser General Public License as published by the Free Software
+* Foundation; either version 3.0 of the License, or (at your option) any later
+* version.
+*
+* BigBlueButton is distributed in the hope that it will be useful, but WITHOUT ANY
+* WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+* PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.
+*
+* You should have received a copy of the GNU Lesser General Public License along
+* with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
+*/
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_self
+ */
+
+@import "tabler/variables";
+@import "bootstrap";
+@import "jquery-ui/sortable";
+@import "tabler-custom";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "monolith.min.scss";
+@import "bootstrap-select.min";
+
+@import "utilities/variables";
+@import "admins";
+@import "main";
+@import "rooms";
+@import "sessions";
+@import "utilities/fonts";
+@import "users";
+
+* {
+  outline: none !important;
+}
+
+html, body {
+  font-family: "Source Sans Pro" !important;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+a {
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+.dotted_underline {
+  border-bottom: 3px dashed #d3d3d3;
+  width: 100%;
+}
+
+.disable-click {
+  pointer-events: none;
+}
+
+.header {
+  height: $header-height;
+}
+
+.wrapper {
+  position: relative;
+  height: auto;
+  min-height: calc(100% - #{$header-height} - #{$footer-height});
+}
+
+.footer {
+  height: $footer-height;
+  width: 100%;
+}
+
+.background {
+  background-color: #2E3B4E;
+}
+
+.error-section {
+  background-color: $error-background-color;
+}
+
+.font-weight-400 {
+  font-weight: 400;
+}
+
+.subtitle {
+  font-size: 25px;
+}
+
+.force-bottom {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.invite-link-input {
+  width: 100%;
+}
+
+.no-border-top {
+  td {
+    border-top: none;
+  }
+}
+
+.force-text-normal {
+  color: #495057;
+}
+
+.terms {
+  overflow: scroll;
+  height: 55vh;
+}
+
+[contenteditable]:focus {
+  outline: 0px solid transparent;
+}
+
+.cookies-banner {
+  color: white;
+  background-color: $button-color-blue;
+  #cookies-agree-button {
+    margin: 0;
+  }
+}
+
+input:focus {
+    border-color: $primary !important;
+}
+
+.input-group button:focus {
+    box-shadow: none !important;
+}
+
+.list-group-item-action.active {
+  color: $primary;
+}
+
+.header .header-nav {
+  color: $text-muted !important;
+
+  &:hover {
+    padding-bottom: 21px;
+    border-bottom: 1px solid $primary;
+  }
+
+  &.active {
+    color: $primary !important;
+    padding-bottom: 21px;
+    border-bottom: 1px solid $primary;
+  }
+}
+
+table {
+  thead {
+    th[data-order]:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+#delete-confirm:disabled {
+  cursor: not-allowed;
+}
+
+.btn i {
+  transition: all .15s;
+}
+
+ /*
+  custom css //home page
+ */
+ .btn-warning {
+  background-color: #F9D625 !important;
+  border-color: #F9D625 !important;
+ }
+ .btn-warning:hover {
+    background-color: #cea70c !important;
+    border-color: #c29d0b !important;
+}
+ .sign-in-button {
+  border-color: #707070 !important;
+  color: #fff !important;
+ }
+ .sign-in-button:hover{
+  background-color: #39475D !important;
+  border-color: #39475D !important;
+ }
+.backgroun-auth {
+  background: #F4F6F7;
+}
+ .background-custom {
+    background-color: #2E3B4E !important;
+    background: image-url("landing/Mask_Group_3.png")no-repeat left top;
+    width: 100%;
+    background-position: 41% 67%;
+    background-repeat: no-repeat;
+ }
+.contents-bg {
+  background: #F4F6F7;
+}
+.text-wrapper {
+    padding: 100px 0; 
+}
+.home-stamp {
+  background: #fff;
+  padding: 40px 52px !important;
+}
+.home-stamp i {
+  color: #6D7FB2;
+}
+.customIndex-image_1 {
+  background: image-url("landing/Group_5.png") no-repeat left top;
+  background-size: 300px 112px;
+  width: 300px;
+  height: 112px;
+}
+.customIndex-image_2 {
+  background: image-url("landing/Group_100.png") no-repeat left top;
+  width: 100%;
+  height: 411px;
+}
+.bg-right, .bg-left{
+  float: left;
+}
+.bg-left {
+  margin: 100px 0;
+}
+.custom-btn{
+  margin: 30px 0;
+  text-align: left;
+}
+.custom-btn a {
+    width: 80%;
+    margin: 7px 0;
+}
+.about_us {
+  margin: 50px 0 0;
+}
+.about_us a {
+  width: 300px;
+  border-radius: 23px;
+}
+.doors-post {
+    width: 80%;
+    text-align: left;
+    margin: auto;
+  }
+.doors-post h6{
+    line-height: 1.3;
+    font-weight: 500 !important;
+}
+.logo{
+   background: image-url("landing/logo.png") no-repeat left top;
+   width: 89px;
+   height: 26px;
+}
+.btn-custom-primary {
+  color: #fff !important;
+}
+.btn-custom-primary:hover{
+  border-color: #39475D !important;
+}
+/*custom responsive*/
+@media screen and (max-width: 768px) {
+  .background_custom {
+    background-position: 68% 67%;
+  }
+  .text-wrapper {
+    padding: 45px 0;
+  }
+  .customIndex-image_1 {
+    width: 200px;
+    height: 80px;
+    background-size: 200px 80px;
+  }
+  .customIndex-image_2{
+    background-size: contain;
+    background-position: 50% 59%;
+  }
+}
+#room-owner-name {
+  margin: 10px auto;
+}
+.input-group {
+  margin: 13px 0;
+}
+.input-group input {
+    width: 80%;
+    margin: 10px auto;
+}
+.input-group .input-group-append{
+    width: 50%;
+    margin: 10px auto;
+}
+@media screen and (max-width: 414px) {
+  .background-custom {
+    background-position: 80% 216%;
+  }
+  .customIndex-image_1{
+    width: 100%;
+    margin: 0 auto;
+    background-size: 219px 79px;
+    background-position: center;
+  }
+  .bg-left{
+    margin: 20px auto;
+  }
+  .custom-btn{
+    text-align: center;
+  }
+  .customIndex-image_2{
+    background-position: 50% 0%;
+    height: 300px;
+  }
+
+}
+/*end Home Page*/
+/* start show page*/
+.background_show{
+  background: #F4F6F7;
+}
+.show-banner{
+    width: 100%;
+    display: flex;
+    background: #fff;
+    padding: 80px 20px;
+    border-radius: 50px;
+}
+.show-wrapper{
+    width: 100%;
+    display: flex;
+    padding: 0 30px;
+}
+/*custom responsive*/
+@media screen and (max-width: 414px) {
+  .show-wrapper{
+    display: block;
+    text-align: center;
+  }
+  #room-title{
+    width: 93%;
+    margin: 0 auto;
+    display: block;
+  }
+  #user-text{
+    text-align: center !important;
+  }
+  .show-wrapper h4{
+    text-align: center !important;
+  }
+  #copy-invite{
+    margin-top: 10px;
+  }
+  .start-button{
+    width: 100%;
+    font-size: 18px !important;
+    margin-top: 20px;
+  }
+  .input-group{
+    margin: 46px auto;
+  }
+  .room_border{
+    width: 100% !important;
+  }
+  .input-group input {
+    width: 100%;
+    margin: 0;
+  }
+  .input-group .input-group-append{
+      width: 100%;
+      margin: 0;
+  }
+}
+/*end show page*/
+
+
+// custom logo
+
+.custom-logo{
+    width: auto !important;
+    border-radius: inherit !important;
+    background-color: transparent !important;
+}
+
+
+

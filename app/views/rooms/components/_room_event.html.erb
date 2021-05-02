@@ -1,0 +1,51 @@
+<%
+# BigBlueButton open source conferencing system - http://www.bigbluebutton.org/.
+# Copyright (c) 2018 BigBlueButton Inc. and by respective authors (see below).
+# This program is free software; you can redistribute it and/or modify it under the
+# terms of the GNU Lesser General Public License as published by the Free Software
+# Foundation; either version 3.0 of the License, or (at your option) any later
+# version.
+#
+# BigBlueButton is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.
+# You should have received a copy of the GNU Lesser General Public License along
+# with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
+%>
+<div class="header py-4">
+    <div class="container">
+      <div class="d-flex">
+        <%= link_to (current_user ? home_page : root_path), class: "header-brand" do %>
+            <div class="logo"></div>
+        <% end %>
+      </div>
+    </div>
+</div>
+<div class="background_show pb-1" room="<%= @room.uid %>" user="<%= current_user ? current_user.uid : "anonymous" %>" join-name="<%= @join_name %>">
+  <div class="container">
+    <div class="row pt-7 pt-sm-7 mb-7">
+      <div class="show-banner">
+        <div class="show-wrapper">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <h1 class="text-left"><%= t("room.invited") %></h1>
+            <hr class="mt-2 float-left w-50 room_border">
+            <h1 class="mb-3 font-weight-400" style="clear: both;"><%= title(@room.name) %></h1>
+            <% if @room.owner.image.blank? %>
+              <span class="avatar"><%= @room.owner.name.first %></span>
+            <% else %>
+              <span class="avatar" style="background-image: url(<%= @room.owner.image %>)"></span>
+            <% end %>
+            <h5 id="room-owner-name" class="font-weight-normal ml-2 mt-3 d-inline-block"><%= @room.owner.name %> (<%= t("room.owner") %>)</h5>  
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
+
+<% #if render_recordings && !hide_recording_tables %>
+  <% #render "shared/sessions", recordings: @public_recordings, pagy: @pagy, only_public: true, user_recordings: false, title: t("room.recordings") %>
+<% #end %>

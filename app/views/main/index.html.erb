@@ -1,0 +1,36 @@
+<%
+# BigBlueButton open source conferencing system - http://www.bigbluebutton.org/.
+# Copyright (c) 2018 BigBlueButton Inc. and by respective authors (see below).
+# This program is free software; you can redistribute it and/or modify it under the
+# terms of the GNU Lesser General Public License as published by the Free Software
+# Foundation; either version 3.0 of the License, or (at your option) any later
+# version.
+#
+# BigBlueButton is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.
+# You should have received a copy of the GNU Lesser General Public License along
+# with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
+%>
+
+<div class="background-custom">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 text-center">
+        <div class="col-lg-4 col-md-4 bg-left">
+		      <div class="customIndex-image_1"></div>
+          <div class="custom-btn">
+            <%= link_to "ログイン", signin_path, :class => "btn btn-lg mx-2 sign-in-button"  %>
+            <%= link_to "新規会員登録", "https://form.run/@doors1615898361", :class => "btn btn-warning mx-2 btn-lg"  %>
+          </div>
+        </div>
+        <div class="col-lg-8 col-md-8 bg-right">
+          <div class="customIndex-image_2"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<%= render "main/components/features" %>

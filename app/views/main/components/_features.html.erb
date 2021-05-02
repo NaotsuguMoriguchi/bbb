@@ -1,0 +1,50 @@
+<%
+# BigBlueButton open source conferencing system - http://www.bigbluebutton.org/.
+# Copyright (c) 2018 BigBlueButton Inc. and by respective authors (see below).
+# This program is free software; you can redistribute it and/or modify it under the
+# terms of the GNU Lesser General Public License as published by the Free Software
+# Foundation; either version 3.0 of the License, or (at your option) any later
+# version.
+#
+# BigBlueButton is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.
+# You should have received a copy of the GNU Lesser General Public License along
+# with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
+%>
+
+<div class="contents-bg" style="display:none">
+<div class="container text-wrapper text-center">
+
+  <h2 class="mb-6"><%= t("DOORS") %> <%= t("features.title") %></h2>
+
+  <div class="row feature-stamp">
+    <div class="col-lg-4 col-md-4">
+      <div class="feature-item">
+	     <div class="home-stamp"><i class="fas fa-laptop fa-4x"></i></div>
+          <h4 class="mt-4"><%= t("features.rooms") %></h4>
+          <div class="col-lg-12 col-md-12 col-sm-12 doors-post">
+            <h6 class="mt-4">URLを共有するとアプリ不要でビデオ通話が開始できます。画面共有やチャット機能をはじめ、接客や会議を手助けする機能が充実！</h6>
+          </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-4">
+      <div class="home-stamp"><i class="fas fa-tools fa-4x"></i></div>
+        <h4 class="mt-4"><%= t("features.recordings") %></h4>
+        <div class="col-lg-12 col-md-12 col-sm-12 doors-post">
+          <h6 class="mt-4">ビデオルームのロゴや背景画像を自由に変更できます。他社と差別化したブランドイメージを崩さないビデオ通話を実現できます。</h6>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-4">
+      <div class="home-stamp"><i class="fas fa-clipboard-list fa-4x"></i></div>
+        <h4 class="mt-4"><%= t("features.designs") %></h4>
+        <div class="col-lg-12 col-md-12 col-sm-12 doors-post">
+          <h6 class="mt-4">ビデオ通話の録画管理や予約の管理、ビデオルームの管理がDOORSだけで完結するので手軽にリモート体制を導入することができます。</h6>
+        </div>
+    </div>
+  </div>
+  <div class="about_us">
+    <%= link_to "詳しくはコチラ", "https://bigbluebutton.org/2018/07/09/greenlight-2-0/", target: "_blank", :class => "btn btn-warning mx-2 btn-lg"  %>
+  </div>
+</div>
+</div>
